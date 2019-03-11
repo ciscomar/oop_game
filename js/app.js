@@ -10,7 +10,9 @@ document.getElementById("qwerty").addEventListener('click',function(e){
     NewGame.handleInteraction(e,0);
 });
 //Listens for pressedkey to handle interaction in game
-addEventListener('keypress',function(event){
-    NewGame.handleInteraction(0,event)
+addEventListener('keypress', function (event) {
+    if (overlay.style.display == 'none') {
+        NewGame.handleInteraction(0, event)
+    }
 })
 
